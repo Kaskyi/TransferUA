@@ -1,0 +1,112 @@
+﻿extends layout
+
+block content
+    .container
+        .row
+          .col-sm-3
+            .row
+              .col-sm-12
+                img.img-responsive.img-round(src='../images/avatar.jpg', alt='avatar')
+                div.text-right edit
+            .row
+              .col-sm-2
+              .col-sm-10
+                h3 #{name}
+                hr
+                h4 E-mail : #{email}
+                h4 mob. phone: #{contact}
+       
+
+
+          .col-sm-9
+            ul.nav.nav-tabs(role='tablist' id='myTabs')
+              li.active(role='presentation')
+                a(href='#tab1' role='tab') Рассматриваться
+              li
+                a(href='#tab2' role='tab') Выполняется
+              li
+                a(href='#tab3' role='tab') Выполнены
+            .tab-content
+              .row.tab-panel.fade.active(role='tabpanel' id='tab1' data-toggle='tab')
+                .col-sm-12
+                  h3 Рассматриваться
+                  hr.orange 
+                  .table-responsive
+                     table.table.table-striped-orange 
+                        thead
+                           tr
+                              th Product Name
+                              th From
+                              th To
+                              th Start Time
+                              th End Time
+                        tbody
+                          - each considered in considereds
+                            - if (considered.status == 1)
+                              tr
+                                td 
+                                  = considered.info
+                                td 
+                                  = considered.start_place
+                                td 
+                                  = considered.end_place
+                                td 
+                                  = considered.start_time
+                                td 
+                                  = considered.end_time
+              .row.tab-panel.fade(role='tabpanel' id='tab2' data-toggle='tab')
+                .col-sm-12
+                  h3 Выполняется
+                  hr.green
+                  .table-responsive
+                     table.table.table-striped-green 
+                        thead
+                           tr
+                              th Product Name
+                              th From
+                              th To
+                              th Start Time
+                              th End Time
+                        tbody
+                          - each considered in considereds
+                            - if (considered.status == 2)
+                              tr
+                                td 
+                                  = considered.id_consignment
+                                td 
+                                  = considered.start_place
+                                td 
+                                  = considered.end_place
+                                td 
+                                  = considered.start_time
+                                td 
+                                  = considered.end_time
+              .row.tab-panel.fade(role='tabpanel' id='tab3' data-toggle='tab')
+                .col-sm-12
+                  h3 Выполнены
+                  hr
+                  .table-responsive
+                     table.table.table-striped-grey
+                        thead
+                           tr
+                              th Product Name
+                              th From
+                              th To
+                              th Start Time
+                              th End Time
+                        tbody
+                          - each considered in considereds
+                            - if (considered.status == 3)
+                              tr
+                                td 
+                                  = considered.id_consignment
+                                td 
+                                  = considered.start_place
+                                td 
+                                  = considered.end_place
+                                td 
+                                  = considered.start_time
+                                td 
+                                  = considered.end_time
+                      
+                   

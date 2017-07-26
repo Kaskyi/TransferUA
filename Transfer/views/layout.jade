@@ -1,0 +1,60 @@
+﻿doctype html
+html(lang='en')
+  head
+    meta( http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='https://fonts.googleapis.com/css?family=Dosis|Open+Sans' rel="stylesheet")
+    link(href='./stylesheets/bootstrap.min.css', rel='stylesheet')
+    link(href='./stylesheets/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='./stylesheets/style.css')
+    title TRANSFER UA
+  body
+    #wrapper
+      header     
+        if (is_guest == false)
+          include menus/userMenu
+        else
+          include menus/guestMenu
+      
+      main(style='background-color:#f9f9f9')
+        block content
+      
+      footer
+        .container      
+          .row
+            .col-md-4
+              h5 Адрессa :
+              p 01160, Украина, г. Киев, ул. Харк, 1
+            .col-md-4
+              h5 Телефон :
+              p 8 067 249 11 -- (бесплатно по Украине),
+              |(044) -- 9- 0-
+            .col-md-4
+              h5 Email : 
+                br
+                a.blue jkamenskyi@gmail.com
+        .darkrow © 2016   OOO «Транспортная компания «Transfer UA»
+    block scripts
+      // jQuery (necessary for Bootstrap's JavaScript plugins)
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+      script(src='https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js')
+      // Include all compiled plugins (below), or include individual files as needed
+      script(src='./javascripts/jquery.easing.1.3.js')
+      script(src='https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js')
+      script(src='./javascripts/scrollReveal.js')
+   
+      script(src='./javascripts/bootstap.min.js')
+
+      script(type='text/javascript').
+       (function ($) {
+       $(document).ready(function () {
+        $('#myTabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+        });
+       window.scrollReveal = new scrollReveal();
+       });
+       }(jQuery));
+
+  

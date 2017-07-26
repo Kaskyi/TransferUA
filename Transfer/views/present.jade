@@ -1,0 +1,127 @@
+﻿extends layout
+
+block content
+  section.first-img
+    .container.text-center
+      .col-md-8.overlay
+       h1(data-scroll-reveal='enter from the bottom after 0.1s') ООО «Транспортная компания «Transfer UA» 
+       p(data-scroll-reveal='enter from the bottom after 0.8s')
+        | предлагает расширить границы бизнеса, обеспечивая перевозку сборных грузов по всей территории Украины, без ограничений по размеру и весу груза. Нашей компании под силу помочь Вам доставить документы, посылки, грузы от 5 грамм до 20 тонн в назначенное время и с нужным уровнем качества.
+      .col-md-4.border_left
+       .row
+        form(action='/sessions', method='post')
+          h2 Вход
+          hr
+          .form-horizontal
+           .form-group
+            label.col-sm-2
+            .col-sm-8
+              input.form-control(type='text', name='email', placeholder='Email', value='')
+           .form-group
+            label.col-sm-2
+            .col-sm-8
+              input.form-control(type='password', name='password', placeholder='Password', value='')
+           .form-group
+            .col-xm-12.col-sm-offset-3.col-sm-6
+              input.btn.btn-warning.btn-block(type='submit', value='Sign in')
+  section(style='background-color:rgb(249, 249, 249);')
+    .overlay
+     .container.text-center
+      .row
+        h2(data-scroll-reveal='enter from the right after 0.7s') 6 причин заказать грузоперевозки в «Transfer UA»
+      .row
+        .col-md-4
+         i.fa.fa-flag-checkered.fa-big(style='color: #F56EAB;' data-scroll-reveal='enter from the bottom after 0.2s', aria-hidden='true')
+         h4(data-scroll-reveal='enter from the bottom after 0.4s') Выгодные тарифы
+         p(data-scroll-reveal='enter from the bottom after 0.6s')
+          | Aenean faucibus luctus enim. Duis quis sem risu
+          | suspend lacinia elementum nunc.
+          br
+          |              Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
+        .col-md-4
+         i.fa.fa-globe.fa-big(data-scroll-reveal='enter from the bottom after 0.2s', aria-hidden='true')
+         h4(data-scroll-reveal='enter from the bottom after 0.4s') Грамотная логистика
+         p(data-scroll-reveal='enter from the bottom after 0.6s')
+          | Aenean faucibus luctus enim. Duis quis sem risu
+          | suspend lacinia elementum nunc.
+          br
+          |              Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
+        .col-md-4
+         i.fa.fa-users.fa-big(data-scroll-reveal='enter from the bottom after 0.2s', aria-hidden='true')
+         h4(data-scroll-reveal='enter from the bottom after 0.4s') Пунктуальность 
+         p(data-scroll-reveal='enter from the bottom after 0.6s')
+          | Aenean faucibus luctus enim. Duis quis sem risu
+          | suspend lacinia elementum nunc.
+          br
+          |              Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
+      .row
+        .col-md-4
+         i.fa.fa-signal.fa-big(data-scroll-reveal='enter from the bottom after 0.2s', aria-hidden='true')
+         h4(data-scroll-reveal='enter from the bottom after 0.4s') Ответственность 
+         p(data-scroll-reveal='enter from the bottom after 0.6s')
+          | Aenean faucibus luctus enim. Duis quis sem risu
+          | suspend lacinia elementum nunc.
+          br
+          |              Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
+        .col-md-4
+         i.fa.fa-graduation-cap.fa-big(data-scroll-reveal='enter from the bottom after 0.2s', aria-hidden='true')
+         h4(data-scroll-reveal='enter from the bottom after 0.4s') Опыт
+         p(data-scroll-reveal='enter from the bottom after 0.6s')
+          | Aenean faucibus luctus enim. Duis quis sem risu
+          | suspend lacinia elementum nunc.
+          br
+          |              Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
+        .col-md-4
+         i.fa.fa-thumbs-up.fa-big(data-scroll-reveal='enter from the bottom after 0.2s', aria-hidden='true')
+         h4(data-scroll-reveal='enter from the bottom after 0.4s') Квалифицированные водители и грузчики
+         p(data-scroll-reveal='enter from the bottom after 0.6s')
+          | Aenean faucibus luctus enim. Duis quis sem risu
+          | suspend lacinia elementum nunc.
+          br
+          |              Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
+  section.second-img
+    .overlay
+     .container
+      .container.text-center
+        .col-lg-8.col-lg-offset-2.col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
+         h2(data-scroll-reveal='enter from the bottom after 0.1s') High Performance Teams Run On Teamwork
+         p(data-scroll-reveal='enter from the bottom after 0.8s')
+          | Aenean faucibus luctus enim. Duis quis sem risu suspend
+          | lacinia elementum nunc.
+          br
+          |              Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
+  section
+    .overlay
+     .container
+      .row
+        .col-sm-12.col-md-offset-3.col-md-6(style='padding-bottom: 15px;')
+         form(action='/registration', method='post' id='signIn_Form')
+          h1.text-center регистрация
+          hr
+          .form-horizontal
+            .form-group
+            .form-group
+             label.col-sm-4.control-label Email
+             .col-sm-8
+              input.form-control(type='text', name='email', placeholder='email@mail.com', value='')
+            .form-group
+             label.col-sm-4.control-label User name
+             .col-sm-8
+              input.form-control(type='text', name='username', placeholder=' First name Last name', value='')
+            .form-group
+             label.col-sm-4.control-label Password
+             .col-sm-8
+              input.form-control(type='password', name='password', placeholder='Password', value='')
+              p.help-block Use at least one lowercase letter, one numeral, and seven characters.
+            .form-group
+             label.col-sm-4.control-label Repeate the password
+             .col-sm-8
+              input.form-control(type='password', name='password_replica', placeholder='Password', value='')
+            .form-group
+             label.col-sm-4.control-label Mobile phone
+             .col-sm-8
+              input.form-control(type='text', name='mobile_phone', placeholder='8063-...-...-..', value='')
+            .form-group
+             .col-xm-12.col-sm-offset-4.col-sm-4
+              input.btn.btn-warning.btn-block(type='submit', value='Sign up')
+
